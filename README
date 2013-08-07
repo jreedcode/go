@@ -1,0 +1,39 @@
+  
+README  
+  
+  
+=========  
+http://go  
+=========  
+  
+Requisites  
+  Linux  
+  
+Install  
+  Clone the repo  
+  $ git clone https://github.com/jreedcode/go.git  
+  Move the code into /home/go  
+  $ mv go/* /home/go  
+  Run the install  
+  # ./install.sh  
+  This will install the dependancies, build the database schema  
+  and triggers, then setup Apache. Reload Apache.  
+  
+Edit Config  
+  Add your variables in go.py for ADMIN_MAILBOXES, SMTP_SERVER and  
+  DOMAIN_EMAIL.  
+  
+Update DNS  
+  Add the CNAME "go" to your DNS infrastructure and point it to this server.  
+  Point your browser http://go.  
+  
+  
+CONTRIBUTIONS  
+  Feel free to contribute. Contact me https://github.com/jreedcode.  
+  Clone it on github.  
+  
+  
+SEE ALSO  
+  http://yourls.org/ - A great tiny URL implementation in PHP.  
+  
+  

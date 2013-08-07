@@ -1,0 +1,9 @@
+CREATE TRIGGER update_stats_lastVisit AFTER UPDATE ON stats
+  BEGIN
+UPDATE stats SET lastVisit = datetime('now', 'localtime') WHERE rowid = new.rowid;
+  END;
+ 
+CREATE TRIGGER insert_stats_lastVisit AFTER INSERT ON stats
+  BEGIN
+UPDATE stats SET lastVisit = datetime('now', 'localtime') WHERE rowid = new.rowid;
+  END;

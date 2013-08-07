@@ -1,0 +1,5 @@
+
+CREATE TRIGGER insert_redirects_newGo AFTER INSERT ON redirects
+  BEGIN
+UPDATE redirects SET createDate = datetime('now', 'localtime') WHERE rowid = new.rowid;
+  END;
